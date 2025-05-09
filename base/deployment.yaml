@@ -6,10 +6,15 @@ metadata:
     tier: front
   name: vote
 spec:
-  replicas: 1
+  replicas: 4
   selector:
     matchLabels:
       app: vote
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 2
   template:
     metadata:
       labels:
