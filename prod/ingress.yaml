@@ -4,6 +4,8 @@ kind: Ingress
 metadata:
   name: vote-ingress
   namespace: prod
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   ingressClassName: nginx
   rules:
