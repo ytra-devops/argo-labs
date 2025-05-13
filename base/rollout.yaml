@@ -10,7 +10,7 @@ spec:
   selector:
     matchLabels:
       app: vote
-  strategy:
+  strategy: 
     blueGreen:
       autoPromotionEnabled: true
       autoPromotionSeconds: 30
