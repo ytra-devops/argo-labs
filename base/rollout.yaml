@@ -6,11 +6,11 @@ metadata:
     tier: front
   name: vote
 spec:
-  replicas: 4
+  replicas: 1
   selector:
     matchLabels:
       app: vote
-  strategy: 
+  strategy:
     blueGreen:
       autoPromotionEnabled: true
       autoPromotionSeconds: 30
